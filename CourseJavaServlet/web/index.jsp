@@ -16,7 +16,24 @@
         <h2>Aqui se piden los datos</h2>
         <p>Hola, por favor introduce la información</p>
         <hr/>
+        
         <form action="paginaDestino.jsp" method="post">
+         
+        </form>
+        
+        
+        <form action="paginaDestino.jsp" method="post">
+            
+                <h1>Area de Texto</h1>
+        <p>Se puede desplegar el texto por default</p>
+        <textarea name="area1" rows="20" cols="30">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </textarea>       
+        <p>
+        <p>O puede ser un area en blanco para caoturar texto</p>
+        <textarea name="area2" rows="4" cols="60"></textarea>
+            <hr>
+               <input type="submit" value="Enviar">
             <p>Idioma Natal: <br> 
             <select name="idioma">
                 <option>Ingles</option>

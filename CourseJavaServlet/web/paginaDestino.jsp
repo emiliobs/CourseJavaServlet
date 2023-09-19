@@ -31,11 +31,30 @@
         String idioma = request.getParameter("idioma");
         String[] lenguajeSeleccionado = request.getParameterValues("lenguajes");
         
+        String textArea1 = request.getParameter("area1");
+
+        String textArea = request.getParameter("area2");
+        
           
         %>
         
         <h1>Esta es la página de destino</h1>
         <h2>Aquí se despliegan los datos que recibieron</h2>
+        <hr/>
+        <table border="1">
+            <tr>
+                <td>
+                    El usuario escribió: <br>
+                    <%= textArea %>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    El usuario escribió: <br>
+                    <%= textArea1 %>
+                </td>
+            </tr>
+        </table>
         <hr/>
         <table border="1">
             <tr>
@@ -45,11 +64,12 @@
             <p>
                 Manejas los siguientes lenguajes programación: <br>
                 <%
-                      for (Object elem :  lenguajeSeleccionado)
-                          {
-                          %>
-                          <%= elem.toString() %>
-                          <%
+                      for (int i = 0; i <  lenguajeSeleccionado.length ; i++)
+                                        
+                      {
+                      %>
+                          <%=  lenguajeSeleccionado[i] %>
+                       <%
                               }
                         %>
             </p>
