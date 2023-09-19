@@ -12,11 +12,38 @@
         <title>Index</title>
     </head>
     <body>
+        <h1>Esta es la Pagina de Inicio.</h1>
+        <h2>Aqui se piden los datos</h2>
+        <p>Hola, por favor introduce la información</p>
+        <hr/>
+        <form action="paginaDestino.jsp" method="post">
+            <p>Idioma Natal: <br> 
+            <select name="idioma">
+                <option>Ingles</option>
+                <option>Frances</option>
+                <option>Aleman</option>
+            </select>
+                </p>
+                <br>
+                <p>Selecciones tu lenguaje de Programación<br>
+                    (ctrl-click para eligir varias opciones.)<br>
+                  
+                  <select name="lenguajes" multiple="">
+                      <option Selected>Java</option>
+                      <option>C++</option>
+                      <option>Basic</option>
+                      <option>C#</option>
+                      <option>Python</option>
+                      <option>Pascal</option>
+                  </select>
+                </p>
+                <br>
+                
+                <input type="submit" value="Enviar">
+        </form>
+        <hr/>
         
-        
-        
-         <h1>Esta es la Página de Inicio</h1>
-        <h2>Aqui se piden loda datos</h2>
+     
         <form action="paginaDestino.jsp" method="post">
             <p>Elige que tranposte prefiere</p>
             <input type="radio" name="transporte" value="Automovil" checked> Coche
@@ -33,9 +60,7 @@
         </form> 
         
         <hr/>
-        <h1>Esta es la Pagina de Inicio.</h1>
-        <h2>Aqui se piden los datos</h2>
-        <p>Hola, por favor introduce la información</p>
+        
         <form action="paginaDestino.jsp" method="post">
             <table  cellspacing='3' cellpading='3' border='1'>
                 <thead>

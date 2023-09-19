@@ -26,11 +26,38 @@
             String ciudad = request.getParameter("ciudad");
             String bosque = request.getParameter("bosque");
             String playa = request.getParameter("playa");
+            
+//Extraccion de los parametros recibidos:
+        String idioma = request.getParameter("idioma");
+        String[] lenguajeSeleccionado = request.getParameterValues("lenguajes");
+        
           
         %>
         
         <h1>Esta es la página de destino</h1>
         <h2>Aquí se despliegan los datos que recibieron</h2>
+        <hr/>
+        <table border="1">
+            <tr>
+                <td>Tu idioma nata es : <%=  idioma %></td>
+            </tr>
+            <br><br>
+            <p>
+                Manejas los siguientes lenguajes programación: <br>
+                <%
+                      for (Object elem :  lenguajeSeleccionado)
+                          {
+                          %>
+                          <%= elem.toString() %>
+                          <%
+                              }
+                        %>
+            </p>
+            
+        </table>
+        
+        
+        <hr/>
         <table border="1">
             <tr>
                 <td>Tu Transporte preferido es el: <%=  transporte %></td>
