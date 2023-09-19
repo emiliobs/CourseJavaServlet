@@ -12,6 +12,7 @@
         <title>Página Destino JSP</title>
     </head>
     <body>
+       
         <%
              //Este es un scriplet
              // Es código en java que captura los parámero enviados
@@ -21,7 +22,51 @@
           String color =  request.getParameter("color");
           String mail = request.getParameter("mail");
           
+            String transporte = request.getParameter("transporte");
+            String ciudad = request.getParameter("ciudad");
+            String bosque = request.getParameter("bosque");
+            String playa = request.getParameter("playa");
+          
         %>
+        
+        <h1>Esta es la página de destino</h1>
+        <h2>Aquí se despliegan los datos que recibieron</h2>
+        <table border="1">
+            <tr>
+                <td>Tu Transporte preferido es el: <%=  transporte %></td>
+                
+            </tr>
+        </table>
+                <p>Eligeste los siguientes destinos: <br></p>
+                <%
+                      if (ciudad != null)
+                 {%>
+                   Ciudad,
+                              
+                <%
+                    }
+                %> 
+                
+                  <%
+                      if (bosque != null)
+                 {%>
+                   bosque,
+                              
+                <%
+                    }
+                %> 
+                
+                  <%
+                      if (playa != null)
+                 {%>
+                   Playa,
+                              
+                <%
+                    }
+                %> 
+        
+        
+        <hr/>
         
         <h1>Esta es la págona destino</h1>
         <h2>Aqui se despliegan los datos que se recibieron</h2>

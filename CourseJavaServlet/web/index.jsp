@@ -12,6 +12,27 @@
         <title>Index</title>
     </head>
     <body>
+        
+        
+        
+         <h1>Esta es la Página de Inicio</h1>
+        <h2>Aqui se piden loda datos</h2>
+        <form action="paginaDestino.jsp" method="post">
+            <p>Elige que tranposte prefiere</p>
+            <input type="radio" name="transporte" value="Automovil" checked> Coche
+            <input type="radio" name="transporte" value="Avion" checked> Avion
+            <input type="radio" name="transporte" value="Camion" checked> Camion
+            
+            <p>Cuále son tus destinos favoritos?</p>
+            <input type="checkbox" name="ciudad" value="ciudad" checked> Ciudad
+            <input type="checkbox" name="bosque" value="bosque" checked> Bosque
+            <input type="checkbox" name="playa" value="playa" checked> Playa
+            <br/> 
+            <input type="submit" value="Enviar">
+        
+        </form> 
+        
+        <hr/>
         <h1>Esta es la Pagina de Inicio.</h1>
         <h2>Aqui se piden los datos</h2>
         <p>Hola, por favor introduce la información</p>
