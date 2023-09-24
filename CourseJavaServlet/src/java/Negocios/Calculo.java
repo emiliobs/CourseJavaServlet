@@ -16,80 +16,34 @@ public class Calculo
     {
     }
 
-    public Calculo(double tiempoInicial, double tiempoFinal, double distancia, double velocidad, double tiempoTotal)
+    public Calculo(String tiempoInicial, String tiempoFinal, String distancia)
     {
-        this.tiempoInicial = tiempoInicial;
-        this.tiempoFinal = tiempoFinal;
-        this.distancia = distancia;
-        this.velocidad = velocidad;
-        this.tiempoTotal = tiempoTotal;
+               this.tiempoInicial = Double.parseDouble(tiempoInicial);
+                this.tiempoInicial = Double.parseDouble(tiempoFinal);
+                this.distancia = Double.parseDouble(distancia);
     }
 
-    public double getTiempoTotal()
-    {
-        return tiempoTotal;
-    }
-
-    public void setTiempoTotal(double tiempoTotal)
-    {
-        this.tiempoTotal = tiempoTotal;
-    }
-
-    public double getTiempoInicial()
-    {
-        return tiempoInicial;
-    }
-
-    public void setTiempoInicial(double tiempoInicial)
-    {
-        this.tiempoInicial = tiempoInicial;
-    }
-
-    public double getTiempoFinal()
-    {
-        return tiempoFinal;
-    }
-
-    public void setTiempoFinal(double tiempoFinal)
-    {
-        this.tiempoFinal = tiempoFinal;
-    }
-
-    public double getDistancia()
-    {
-        return distancia;
-    }
-
-    public void setDistancia(double distancia)
-    {
-        this.distancia = distancia;
-    }
-
-    public double getVelocidad()
-    {
-        return velocidad;
-    }
-
-    public void setVelocidad(double velocidad)
-    {
-        this.velocidad = velocidad;
-    }
-
-    @Override
-    public String toString()
-    {
-        return "Calculo{" + "tiempoInicial=" + tiempoInicial + ", tiempoFinal=" + tiempoFinal + ", distancia=" + distancia + ", velocidad=" + velocidad + ", tiempoTotal=" + tiempoTotal + '}';
-    }
+    
     
     
     public void Velocidad()
     {
-        velocidad = distancia / (tiempoFinal - tiempoInicial);
+        this.velocidad  = distancia / (tiempoFinal - tiempoInicial);
     }
     
     public  void TiempoTotal()
     {
-        tiempoTotal = tiempoFinal - tiempoInicial;
+        this.tiempoTotal = tiempoFinal - tiempoInicial;
+    }
+    
+    public  Double getVelocidad()
+    {
+        return this.velocidad;
+    }
+    
+    public  Double getTiempo()
+    {
+        return  this.tiempoTotal;
     }
     
     

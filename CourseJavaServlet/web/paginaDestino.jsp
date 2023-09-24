@@ -38,14 +38,15 @@
         
             String nombre = request.getParameter("nombre");
             String timepoInicial = request.getParameter("tiempoInicial");
-            String timepoFinal = request.getParameter("tiempoFinal");
+            String timepoFinal = request.getParameter("tiempoFInal");
             String distancoa = request.getParameter("distancia");
             double velocidad, tiempo;
             
-            Calculo calculo = new Calculo();
+            Calculo calculo = new  Calculo(timepoInicial, timepoFinal, distancoa);
+            calculo.Velocidad();
             velocidad = calculo.getVelocidad();
             calculo.TiempoTotal();
-            tiempo = calculo.getTiempoTotal();
+            tiempo = calculo.getTiempo();
            
         %>
         
@@ -69,73 +70,6 @@
             </form>
         </table>
         <hr>
-        <h1>Esta es la página de destino</h1>
-        <h2>Aquí se despliegan los datos que recibieron</h2>
-        <hr/>
-        <table border="1">
-            <tr>
-                <td>
-                    El usuario escribió: <br>
-                    <%= textArea %>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    El usuario escribió: <br>
-                    <%= textArea1 %>
-                </td>
-            </tr>
-        </table>
-        <hr/>
-        <table border="1">
-            <tr>
-                <td>Tu idioma nata es : <%=  idioma %></td>
-            </tr>
-            <br><br>
-            <p>
-                Manejas los siguientes lenguajes programación: <br>
-                <%
-                      for (int i = 0; i <  lenguajeSeleccionado.length ; i++)
-                                        
-                      {
-                      %>
-                          <%=  lenguajeSeleccionado[i] %>
-                       <%
-                              }
-                        %>
-            </p>
-            
-        </table>
         
-        
-        <hr/>
-        <table border="1">
-            <tr>
-              
-                
-            </tr>
-        </table>
-                <p>Eligeste los siguientes destinos: <br></p>
-<!--          
-        
-        
-        <hr/>
-        
-        <h1>Esta es la págona destino</h1>
-        <h2>Aqui se despliegan los datos que se recibieron</h2>
-        <p>Tus datos son los siguintes</p>
-        <table border="1">
-            <tr>
-                <td>Te llamas: </td>
-                <td><%= nombre %></td>
-            </tr>
-             <tr>
-                <td>Tu color favorikto es: </td>
-              
-            </tr>
-        </table>
-            <form action="index.jsp" method="post">
-                <input type="submit" value="Regresar">
-            </form>
 \    </body>
 </html>
