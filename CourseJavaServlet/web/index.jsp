@@ -12,6 +12,61 @@
         <title>Index</title>
     </head>
     <body>
+        <h1>Esta es la página de Inicio</h1>
+        <h2>Aqui se piden los datos</h2>
+        <p>HOla, por favor introduce la información</p>
+        
+        <form action="paginaDestino.jsp" method="post">
+            <table border="1">
+                <tr>
+                    <td>
+                        Nombre:
+                        <input type="text" name="nombre">
+                    </td>                    
+                </tr>
+                  <tr>
+                    <td>
+                        Minuto Inicial:
+                        <input type="text" name="tiempoInicial">
+                    </td>                    
+                </tr>
+                  <tr>
+                    <td>
+                        Minuto Final:
+                        <input type="text" name="tiempoFInal">
+                    </td>                    
+                </tr>
+                  <tr>
+                    <td>
+                        Distancia Recorrido (en metros):
+                        <input type="text" name="distancia">
+                    </td>                    
+                </tr>
+            </table>
+            <br>
+                        <input type="reset" value="borrar"/> 
+                         <input type="submit" value="Enviar">
+        </form>
+        <hr>
+        <h1>Cuneta Total</h1>
+        <%@ page import="java.util.Date" %>
+        <%! int cuentaGlobal = 0; %>
+        
+        <% cuentaGlobal++;%>
+        
+        <h2> En esta Págona se lleva la cuenta del número de accesos</h2>
+        <table  border="1">
+            <tr>
+                <td>Fecha y Hora: <%=  new Date() %></td>
+            </tr>
+        </table>
+            <br>
+            <table border="1">
+                <tr>
+                    <td>Número de Accesos: <%=  cuentaGlobal %></td>
+                </tr>
+            </table>
+        <hr/>
         <h1>Esta es la Pagina de Inicio.</h1>
         <h2>Aqui se piden los datos</h2>
         <p>Hola, por favor introduce la información</p>
