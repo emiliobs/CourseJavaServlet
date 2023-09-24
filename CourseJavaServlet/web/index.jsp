@@ -16,7 +16,7 @@
         <h2>Aqui se piden los datos</h2>
         <p>HOla, por favor introduce la información</p>
         
-        <form action="paginaDestino.jsp" method="post">
+        <form action="paginaRegistro.jsp" method="post">
             <table border="1">
                 <tr>
                     <td>
@@ -26,26 +26,21 @@
                 </tr>
                   <tr>
                     <td>
-                        Minuto Inicial:
-                        <input type="text" name="tiempoInicial">
+                        Apellidos:
+                        <input type="text" name="apellidos">
                     </td>                    
                 </tr>
                   <tr>
                     <td>
-                        Minuto Final:
-                        <input type="text" name="tiempoFInal">
+                        Promedio:
+                        <input type="text" name="promedio">
                     </td>                    
                 </tr>
-                  <tr>
-                    <td>
-                        Distancia Recorrido (en metros):
-                        <input type="text" name="distancia">
-                    </td>                    
-                </tr>
+                 
             </table>
             <br>
+                      <input type="submit" value="Enviar">
                         <input type="reset" value="borrar"/> 
-                         <input type="submit" value="Enviar">
         </form>
       
     

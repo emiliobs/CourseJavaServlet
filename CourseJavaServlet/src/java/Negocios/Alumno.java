@@ -50,6 +50,12 @@ public class Alumno
     {
         this.promedio = promedio;
     }
+
+    @Override
+    public String toString()
+    {
+        return "Alumno{" + "nombre=" + nombre + ", apellidos=" + apellidos + ", promedio=" + promedio + '}';
+    }
     
     
 }

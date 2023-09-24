@@ -25,9 +25,9 @@ public class EscribaArchivo
             printWriter.println(alumno.getNombre() + "  , "  + alumno.getApellidos() +  " , "  + alumno.getPromedio());
             
         }
-        catch (IOException e)
+        catch (Exception e)
         {
-            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
         }
         finally
         {
@@ -40,7 +40,7 @@ public class EscribaArchivo
             }
             catch (Exception e2)
             {
-                e2.printStackTrace();
+                System.out.println("Error: " + e2.getMessage());
             }
         }
     }
