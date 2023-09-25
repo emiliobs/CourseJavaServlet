@@ -4,6 +4,7 @@
     Author     : Emilio
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page import="Negocios.Alumno"%>
 <!doctype html>
 <html lang="en">
@@ -15,8 +16,12 @@
     </head>
     <body>
         <%
-            Alumno alumno = (Alumno) request.getAttribute("alumno");
-        %>
+           
+        //   ArrayList<Alumno> alumnos = (ArrayList<Alumno>) request.getAttribute("alumnos");
+            // String numeroRegistro = (String) request.getAttribute("contador");
+            /// int numRegister = Integer.parseInt(numeroRegistro);
+            // Alumno alumno = (Alumno) request.getAttribute("alumno");
+%>
         <div class="container ">
             <h1>Sowing Datas!</h1>
             <table class="table">
@@ -30,13 +35,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td><%= alumno.getNombre() %></td>
-                        <td><%=  alumno.getApellidos() %></td>
-                        <td><%= alumno.getPromedio() %></td>
-                        <td><a class="btn btn-info" href="index.jsp">Go to Index</a></td>
-                    </tr>
+                  
                 </tbody>
                 <tfoot>
                     <tr>

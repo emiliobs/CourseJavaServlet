@@ -24,6 +24,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Send!</button>
                 <button type="reset" class="btn btn-danger">Reset!</button>
+                <a><a href="showDatas.jsp" class="btn btn-warning">Mostrar Datos</a>
             </form>
         </div>
 
