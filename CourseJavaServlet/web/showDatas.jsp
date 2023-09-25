@@ -4,6 +4,7 @@
     Author     : Emilio
 --%>
 
+<%@page import="Negocios.Alumno"%>
 <!doctype html>
 <html lang="en">
     <head>
@@ -13,6 +14,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     </head>
     <body>
+        <%
+            Alumno alumno = (Alumno) request.getAttribute("alumno");
+        %>
         <div class="container ">
             <h1>Sowing Datas!</h1>
             <table class="table">
@@ -28,9 +32,9 @@
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>${alumno.nombre}</td>
-                        <td>${alumno.apellidos}</td>
-                        <td>${alumno.promedio}</td>
+                        <td><%= alumno.getNombre() %></td>
+                        <td><%=  alumno.getApellidos() %></td>
+                        <td><%= alumno.getPromedio() %></td>
                         <td><a class="btn btn-info" href="index.jsp">Go to Index</a></td>
                     </tr>
                 </tbody>

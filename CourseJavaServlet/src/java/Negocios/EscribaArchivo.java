@@ -1,5 +1,6 @@
 package Negocios;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -21,8 +22,13 @@ public class EscribaArchivo
         {
             archivo = new File(path);
             fileWriter = new FileWriter(archivo, true);
-            printWriter = new PrintWriter(fileWriter);
-            printWriter.println(alumno.getNombre() + "  , "  + alumno.getApellidos() +  " , "  + alumno.getPromedio());
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+//            printWriter = new PrintWriter(fileWriter);
+//            printWriter.println(alumno.getNombre() + "  , "  + alumno.getApellidos() +  " , "  + alumno.getPromedio());
+            String  datos = alumno.getNombre()  + " " + alumno.getApellidos() +  " " + alumno.getPromedio();
+            bufferedWriter.write(datos);
+            bufferedWriter.close();
+
             
         }
         catch (Exception e)
